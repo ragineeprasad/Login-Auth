@@ -1,0 +1,21 @@
+<mat-card style="width: 36%;
+display: flex;">
+    <form style="width:100%;" [formGroup]="loginForm">
+        <mat-form-field style="width:100%;">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" value="UserName" formControlName= "email">
+        </mat-form-field>
+
+        <mat-form-field style="width:100%;">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Password" value="Password" formControlName= "pwd">
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" (click)="login(loginForm.value)">Login</button>
+    </form>
+    <span>{{message}}</span>
+    <div style="width: 290px; padding: 20px;">
+        <button class="form-btn-hollow" (click)="movetoregister()">Register</button>
+    </div>
+</mat-card>
